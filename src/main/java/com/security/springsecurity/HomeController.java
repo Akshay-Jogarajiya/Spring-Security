@@ -11,4 +11,14 @@ public class HomeController {
     public String home(HttpServletRequest request) {
         return "Welcome to Spring Security, Session id : " +request.getSession().getId();
     }
+
+    @GetMapping("/public")
+    public String publicEndpoint() {
+        return "This is public endpoint";
+    }
+
+    @GetMapping("/private")
+    public String privateEndpoint() {
+        return "This is private endpoint";
+    }
 }
