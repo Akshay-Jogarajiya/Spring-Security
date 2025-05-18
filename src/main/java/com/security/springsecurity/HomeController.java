@@ -17,9 +17,9 @@ public class HomeController {
         return "This is public endpoint";
     }
 
-    @GetMapping("/private")
-    public String privateEndpoint() {
-        return "This is private endpoint";
+    @GetMapping("/user")
+    public String userEndpoint() {
+        return "This is user endpoint";
     }
 
     @GetMapping("/admin")

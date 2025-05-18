@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/demo")
 public class DemoController {
 
-    @GetMapping("/public")
+    @GetMapping("/publical")
     public String publicEndpoint() {
         return "this is public endpoint";
     }
