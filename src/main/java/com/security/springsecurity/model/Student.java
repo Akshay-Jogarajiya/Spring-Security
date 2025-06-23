@@ -1,4 +1,4 @@
-package com.security.springsecurity.Model;
+package com.security.springsecurity.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

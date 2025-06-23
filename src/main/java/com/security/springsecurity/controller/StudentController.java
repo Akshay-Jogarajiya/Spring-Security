@@ -1,6 +1,9 @@
-package com.security.springsecurity.Controller;
+package com.security.springsecurity.controller;
 
-import com.security.springsecurity.Model.Student;
+import com.security.springsecurity.model.Student;
+import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -13,6 +16,11 @@ public class StudentController {
             new Student(1, "Akshay", "Java"),
             new Student(2, "Paresh", "JavaScript")
     ));
+
+    @GetMapping("/csrf-token")
+    public CsrfToken getCsrfToken(HttpServletRequest request) {
+        return (CsrfToken) request.getAttribute("_csrf");
+    }
 
     @GetMapping("/students")
     public List<Student> getStudents() {
